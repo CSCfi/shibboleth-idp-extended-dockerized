@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  reverseproxy:
+    image: cscfi/mod_auth_openidc'
+    ports:
+     - "80:80"
+     - "443:443"
+
+  idp:
+    image: cscfi/shibboleth-idp-proxy
+    #Listening 8080
+
+#  idpclient:
+#    image: cscfi/mod_auth_openidc-testrp
+#    ports:
+#     - "8082:80"
